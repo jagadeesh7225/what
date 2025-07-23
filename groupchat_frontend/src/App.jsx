@@ -76,7 +76,7 @@ function App() {
         <div style={{ marginTop: '20px', textAlign: 'center', maxWidth: '400px' }}>
           <p style={{ fontSize: '14px', color: '#666' }}>🔗 Connecting to backend...</p>
           <p style={{ fontSize: '12px', color: '#888' }}>
-            Backend: https://what-2g03.onrender.com/
+            Backend: https://groupchat-with-payment.onrender.com
           </p>
         </div>
         <button 
