@@ -1,0 +1,237 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.group-chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--header-bg);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.chat-layout {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.online-users {
+  width: 250px;
+  background-color: var(--sidebar-bg);
+  padding: 10px;
+  border-right: 1px solid var(--border-color);
+  overflow-y: auto;
+}
+
+.online-user {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.online-user img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.chat-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--main-bg);
+}
+
+.messages-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: var(--message-bg);
+  border-radius: 8px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.own-message {
+  background-color: var(--own-message-bg);
+  align-self: flex-end;
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.user-name {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.message-time {
+  font-size: 0.8em;
+  color: var(--subtle-text);
+}
+
+.message-content p {
+  margin: 0;
+}
+
+.system-message {
+  text-align: center;
+  color: var(--subtle-text);
+  font-style: italic;
+  margin: 10px 0;
+}
+
+.file-preview {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 5px;
+}
+
+.file-attachment {
+  background-color: var(--file-bg);
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.message-input-container {
+  border-top: 1px solid var(--border-color);
+  padding: 10px;
+  background-color: var(--header-bg);
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.message-input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+.send-btn,
+.file-upload-btn,
+.upload-files-btn,
+.clear-files-btn,
+.remove-file-btn,
+.back-btn {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.send-btn:disabled,
+.file-upload-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.upload-status {
+  font-size: 0.9em;
+  color: var(--subtle-text);
+  margin-top: 5px;
+}
+
+/* File Preview */
+.file-preview-area {
+  background-color: var(--preview-bg);
+  padding: 10px;
+  margin-top: 8px;
+  border-radius: 6px;
+}
+
+.selected-files {
+  margin-top: 10px;
+}
+
+.selected-file {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.access-denied {
+  margin: auto;
+  text-align: center;
+  padding: 30px;
+}
+
+.loading-messages {
+  text-align: center;
+  color: var(--subtle-text);
+}
+
+/* Dark Mode Variables */
+body.dark {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --subtle-text: #bbbbbb;
+  --header-bg: #1e1e1e;
+  --sidebar-bg: #1a1a1a;
+  --main-bg: #1e1e1e;
+  --message-bg: #2a2a2a;
+  --own-message-bg: #3a3a3a;
+  --border-color: #333;
+  --input-bg: #2a2a2a;
+  --button-bg: #444;
+  --button-text: #fff;
+  --file-bg: #333;
+  --preview-bg: #2b2b2b;
+}
+
+/* Light Mode Variables */
+body:not(.dark) {
+  --bg-color: #f4f4f4;
+  --text-color: #000000;
+  --subtle-text: #555555;
+  --header-bg: #ffffff;
+  --sidebar-bg: #f0f0f0;
+  --main-bg: #fdfdfd;
+  --message-bg: #e6e6e6;
+  --own-message-bg: #d0f0c0;
+  --border-color: #ccc;
+  --input-bg: #ffffff;
+  --button-bg: #007bff;
+  --button-text: #ffffff;
+  --file-bg: #f3f3f3;
+  --preview-bg: #f5f5f5;
+}
